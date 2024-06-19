@@ -39,6 +39,7 @@ logo = f"""
 ......IF YOU SENT 1 MASSEGE IT'S MEAN 8.....
 --------------------------------------------
 """
+os.system("clear")
 print(logo)
 Number = input(f"{LIGHT_BLUE}Enter Your Target Number : ")
 amount = int(input("ENTER YOUR LIMIT : "))
