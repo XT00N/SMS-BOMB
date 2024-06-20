@@ -35,8 +35,8 @@ logo = f"""
          ██╔██╗    ██║   ██║╚██╗██║
         ██╔╝ ██╗   ██║   ██║ ╚████║
         ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝{end}
-              {GREEN} AUTHOR : XTOON{end}
-......IF YOU SENT 1 MASSEGE IT'S MEAN 8.....
+              {GREEN} AUTHOR : {BOLD}XTOON{end}
+......{ITALIC}IF YOU SENT 1 MASSEGE IT'S MEAN 8{end}.....
 --------------------------------------------
 """
 os.system("clear")
